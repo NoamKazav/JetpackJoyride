@@ -59,7 +59,7 @@ JetpackJoyride/
 Clone this repository:
 git clone https://github.com/NoamKazav/JetpackJoyride.git
 
-Install SFML 2.6 (make sure it’s configured in your system).
+Install SFML 2.6 
 
 Build with CMake or open in Visual Studio 2022.
 
@@ -67,7 +67,7 @@ Run the game 🎉
 
 📸 Screenshots
 
-(Add some gameplay screenshots here)
+![Gameplay Screenshot](screenshots/gameplay.png)
 
 🗂 UML Diagram
 
