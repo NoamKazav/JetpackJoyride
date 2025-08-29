@@ -4,47 +4,29 @@ A simplified Jetpack Joyride-style 2D game built in C++ using SFML and advanced 
 Players control a character with a jetpack, fly to avoid obstacles, collect coins, and use power-ups. The goal: survive as long as possible while scoring points 🚀.
 
 👥 Authors
-
 Noam Kazav
-
 Yuval Avisidris
 
 ✨ Features
-
 Smooth player controls (walking, flying, falling, tank mode).
-
 Obstacles: Missiles, lasers, and more.
-
 Collectibles: Coins & gifts.
-
 Gift effects: Tank, Shield, Speed, and more – each with dynamic logic.
-
 Game states: Intro, Playing, Pause Menu, Game Over.
-
 Spawner system: Dynamic creation of enemies & coins.
-
 Design patterns:
-
 State Pattern (Player states, Game states)
-
 Factory Pattern (creating objects, states, effects)
-
 Command Pattern (menu commands, input handling)
-
 Singleton (Resource manager)
 
 🛠️ Tech Stack
-
 Language: C++17
-
 Library: SFML 2.6
-
 IDE: Visual Studio 2022
-
 Build: CMake
 
 📂 Project Structure
-
 JetpackJoyride/
 │── cmake/          # CMake configuration
 │── include/        # Header files (.h/.hpp)
@@ -55,34 +37,23 @@ JetpackJoyride/
 │── README.md
 
 🚀 How to Run
-
 Clone this repository:
 git clone https://github.com/NoamKazav/JetpackJoyride.git
-
 Install SFML 2.6 
-
 Build with CMake or open in Visual Studio 2022.
-
 Run the game 🎉
 
-📸 Screenshots
+## 📸 Screenshots
+[![Gameplay Screenshot](screenshots/gameplay.png)](screenshots/gameplay.png)
 
-![Gameplay Screenshot](screenshots/gameplay.png)
-
-🗂 UML Diagram
-
-![UML Diagram](UML.png)
+## 🗂 UML Diagram
+[![UML Diagram](UML.png)](UML.png)
 
 🔮 Future Improvements
-
 Add localization (support for multiple languages).
-
 More power-ups (SpeedEffect, FreezeEffect, etc).
-
 Online high-score board.
-
 Mobile adaptation.
 
 ⚠️ Known Issues
-
 No known issues
