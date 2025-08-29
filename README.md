@@ -44,7 +44,7 @@ Build with CMake or open in Visual Studio 2022.
 Run the game 🎉
 
 ## 📸 Screenshots
-![Gameplay Screenshot](https://raw.githubusercontent.com/NoamKazav/JetpackJoyride/main/screenshots/image.png)]
+![Gameplay Screenshot](https://raw.githubusercontent.com/NoamKazav/JetpackJoyride/main/screenshots/image.png)
 
 ## 🗂 UML Diagram
 ![UML Diagram](UML.png)
