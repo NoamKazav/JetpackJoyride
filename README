@@ -44,10 +44,10 @@ Build with CMake or open in Visual Studio 2022.
 Run the game 🎉
 
 ## 📸 Screenshots
-[![Gameplay Screenshot](screenshots/gameplay.png)](screenshots/gameplay.png)
+![Gameplay Screenshot](screenshots/gameplay.png)
 
 ## 🗂 UML Diagram
-[![UML Diagram](UML.png)](UML.png)
+![UML Diagram](UML.png)
 
 🔮 Future Improvements
 Add localization (support for multiple languages).
