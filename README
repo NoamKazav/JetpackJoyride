@@ -1,72 +1,59 @@
-=========================
-Exercise 4 - Jetpack Joyride Style Game
-=========================
+ğŸ® Jetpack Joyride â€“ C++ / SFML
 
-Full Name: Yuval Avisidris, Noam Kazav 
-ID:212889596  324852649
+A simplified Jetpack Joyride-style 2D game built in C++ using SFML and advanced Object-Oriented Programming principles.
+Players control a character with a jetpack, fly to avoid obstacles, collect coins, and use power-ups. The goal: survive as long as possible while scoring points ğŸš€.
 
-=========================
-General Description
-=========================
-This exercise is a simplified Jetpack Joyride-style game developed using SFML and Object-Oriented Programming principles in C++.  
-The game includes a player who can fly using a jetpack, collect coins, encounter obstacles such as missiles and lasers, and use various power-ups. The goal is to advance as far as possible and collect points.
+ğŸ‘¥ Authors
+Noam Kazav
+Yuval Avisidris
 
-=========================
-Design
-=========================
-Main components of the game:
-- **Player**: Controlled by the user, changes its state based on interactions (e.g. flying, walking, tank mode).
-- **Board**: The central controller of the game. Holds all objects, processes input, updates game logic, and renders.
-- **GameObjects**:
-  - `MovingObject`: Enemies (Missiles), Player, etc.
-  - `StaticObject`: Coins, Lasers, Gifts, etc.
-- **Gifts**: Temporary power-ups that change the player's abilities.
-- **GiftEffects**: Classes that apply and remove logic for each type of gift (TankEffect, ShieldEffect, etc).
-- **Spawner System**: Controls when and where objects (like missiles or coins) appear.
-- **Game States**: States like Intro, Playing, PauseMenu, and GameOver, each with distinct behavior.
-- **Command System**: Handles UI buttons and player interaction using the Command design pattern.
+âœ¨ Features
+Smooth player controls (walking, flying, falling, tank mode).
+Obstacles: Missiles, lasers, and more.
+Collectibles: Coins & gifts.
+Gift effects: Tank, Shield, Speed, and more â€“ each with dynamic logic.
+Game states: Intro, Playing, Pause Menu, Game Over.
+Spawner system: Dynamic creation of enemies & coins.
+Design patterns:
+State Pattern (Player states, Game states)
+Factory Pattern (creating objects, states, effects)
+Command Pattern (menu commands, input handling)
+Singleton (Resource manager)
 
-The game uses a Factory design to instantiate game objects and player states based on string keys.
+ğŸ› ï¸ Tech Stack
+Language: C++17
+Library: SFML 2.6
+IDE: Visual Studio 2022
+Build: CMake
 
-=========================
-File List
-=========================
-- `main.cpp` – Entry point, initializes Controller and handles top-level exceptions.
-- `GameCore/Board.*` – Handles the logic and rendering of the gameplay screen.
-- `GameCore/Controller.*` – High-level controller, handles state transitions.
-- `Objects/Player.*` – Represents the player object.
-- `Objects/Coin.*`, `Missile.*`, `Gift.*` – Game objects the player can interact with.
-- `GiftEffects/*.h/.cpp` – Contains logic for gifts (TankEffect, ShieldEffect, TimedGiftEffect).
-- `State/` – Contains player states like Jetting, Walking, Falling, Dead, etc.
-- `Resources.*` – Singleton for managing textures, sounds, fonts, and high score file access.
-- `commands/` – Menu and game command handlers (Pause, Restart, Exit).
-- `factory/GameFactory.*` – Generic Factory for registering and creating objects dynamically.
-- `utils/` – Includes constants and type enums (`ObjectType`, `GiftType`, etc).
+ğŸ“‚ Project Structure
+JetpackJoyride/
+â”‚â”€â”€ cmake/          # CMake configuration
+â”‚â”€â”€ include/        # Header files (.h/.hpp)
+â”‚â”€â”€ resources/      # Assets: images, sounds, fonts
+â”‚â”€â”€ src/            # Source code (.cpp)
+â”‚â”€â”€ UML.png         # UML diagram
+â”‚â”€â”€ CMakeLists.txt  # CMake build configuration
+â”‚â”€â”€ README.md
 
-=========================
-Key Data Structures
-=========================
-- `std::vector<std::unique_ptr<MovingObject>>` – Holds all active moving objects.
-- `std::vector<std::unique_ptr<StaticObject>>` – Holds static objects (coins, lasers, etc).
-- `std::map<ObjectType, sf::Texture>` – Texture management via singleton `Resources`.
-- `PlayerState` hierarchy – Implements State pattern for changing player behavior dynamically.
-- `std::function<void(Player&)>` – Used in `TimedGiftEffect` to define dynamic effect logic.
+ğŸš€ How to Run
+Clone this repository:
+git clone https://github.com/NoamKazav/JetpackJoyride.git
+Install SFML 2.6 
+Build with CMake or open in Visual Studio 2022.
+Run the game ğŸ‰
 
-=========================
-Noteworthy Algorithms
-=========================
-- **Flood Fill** – Used to detect filled areas on the board and mark them.
-- **Factory Pattern** – Used to instantiate states, effects, and objects at runtime.
-- **Collision System** – Uses `typeid` and `dynamic_cast` to detect and process interactions between types.
+## ğŸ“¸ Screenshots
+[![Gameplay Screenshot](screenshots/gameplay.png)](screenshots/gameplay.png)
 
-=========================
-Known Bugs
-=========================
+## ğŸ—‚ UML Diagram
+[![UML Diagram](UML.png)](UML.png)
 
-=========================
-Additional Notes
-=========================
-- To add a new effect (like SpeedEffect), inherit from `TimedGiftEffect` and implement `onStart()` and `onEnd()` functions.
-- All gift types should be registered in the `GameFactory` and `GiftSpawner`.
-- For internationalization, text is currently hard-coded in English. Consider using localization in future.
+ğŸ”® Future Improvements
+Add localization (support for multiple languages).
+More power-ups (SpeedEffect, FreezeEffect, etc).
+Online high-score board.
+Mobile adaptation.
 
+âš ï¸ Known Issues
+No known issues
